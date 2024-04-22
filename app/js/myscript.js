@@ -1,6 +1,6 @@
 function getDresses() {
     let xhr = new XMLHttpRequest();
-    let url = 'http://127.0.0.1:5000/dresses';
+    let url = 'http://192.168.29.240:5000/dresses';
     xhr.open("GET", url, true);
 
     xhr.onreadystatechange = function () {
@@ -26,7 +26,7 @@ function showDresses(data) {
                         <h5>${dress.brand}</h5>
                     </div>
                     <div class="col-2">
-                        <i class="fa-regular fa-heart"></i>
+                        <i onclick="addToWhishList(this)" class="fa-regular fa-heart"></i>
                     </div>
                     <div class="col-2">
                         <i class="fa-solid fa-cart-shopping"></i>
@@ -40,6 +40,16 @@ function showDresses(data) {
     }
 
     document.getElementById("dress-row").innerHTML = content;
+}
+
+function addToWhishList(element) {
+    if(element.classList.contains("fa-regular")) {
+        element.classList.remove("fa-regular");
+        element.classList.add("fa-solid");
+    } else if (element.classList.contains("fa-solid")) {
+        element.classList.remove("fa-solid");
+        element.classList.add("fa-regular");
+    }
 }
 
 getDresses();
