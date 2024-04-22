@@ -1,0 +1,40 @@
+:root {
+    --theme-pink: #ff3f6c;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+i {
+    color: var(--theme-pink);
+}
+
+s {
+    color: #ccc;
+}
+
+.navbar-brand {
+    color: var(--theme-pink);
+}
+
+.nav-link:hover {
+    color: var(--theme-pink);
+}
+
+.my-image {
+    width: 100%;
+}
+
+.dress-box {
+    margin: 25px;
+}
+
+.dress-box:hover {
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+}
+
+.price {
+    font-weight: bold;
+    color: var(--theme-pink);
+}
